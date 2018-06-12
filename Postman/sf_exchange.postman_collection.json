@@ -1,0 +1,3521 @@
+{
+	"info": {
+		"name": "SF Exchange",
+		"_postman_id": "db3f0043-a89f-b3bf-7d4e-909a8bfc3680",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Direct",
+			"description": "",
+			"item": [
+				{
+					"name": "Logger",
+					"description": "",
+					"item": [
+						{
+							"name": "POST /api/logger",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": \"trade1\",\n\t\"ask\": {\n\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\"amount\": 1,\n\t\t\t\"price\": 1.0,\n\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"settlement\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t}\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{domain}}:{{loggerPort}}/api/logger",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{domain}}"
+									],
+									"port": "{{loggerPort}}",
+									"path": [
+										"api",
+										"logger"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "GET /api/logger/active",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": \"trade1\",\n\t\"ask\": {\n\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\"amount\": 1,\n\t\t\t\"price\": 1.0,\n\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"settlement\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t}\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{domain}}:{{loggerPort}}/api/logger/active",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{domain}}"
+									],
+									"port": "{{loggerPort}}",
+									"path": [
+										"api",
+										"logger",
+										"active"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "GET /api/logger/done",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\": \"trade1\",\n\t\"ask\": {\n\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\"amount\": 1,\n\t\t\t\"price\": 1.0,\n\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"settlement\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t}\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{domain}}:{{loggerPort}}/api/logger/done",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{domain}}"
+									],
+									"port": "{{loggerPort}}",
+									"path": [
+										"api",
+										"logger",
+										"done"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Fulfillment",
+					"description": "",
+					"item": [
+						{
+							"name": "Trades",
+							"description": "",
+							"item": [
+								{
+									"name": "POST /api/trades",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"ask\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t}\n}"
+										},
+										"url": {
+											"raw": "http://{{domain}}:{{fulfillmentPort}}/api/trades",
+											"protocol": "http",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{fulfillmentPort}}",
+											"path": [
+												"api",
+												"trades"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET /api/trades",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"ask\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t}\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{fulfillmentPort}}/api/trades",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{fulfillmentPort}}",
+											"path": [
+												"api",
+												"trades"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Users",
+							"description": "",
+							"item": [
+								{
+									"name": "POST /api/users",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{fulfillmentPort}}/api/users",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{fulfillmentPort}}",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "PUT /api/users",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{fulfillmentPort}}/api/users",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{fulfillmentPort}}",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "DELETE /api/users/{id}",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{fulfillmentPort}}/api/users/user1",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{fulfillmentPort}}",
+											"path": [
+												"api",
+												"users",
+												"user1"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET /api/users",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{fulfillmentPort}}/api/users",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{fulfillmentPort}}",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET /api/users/{id}",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{fulfillmentPort}}/api/users/user1",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{fulfillmentPort}}",
+											"path": [
+												"api",
+												"users",
+												"user1"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "OrderBook",
+					"description": "",
+					"item": [
+						{
+							"name": "GET /api/orders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:{{ordersPort}}/api/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "{{ordersPort}}",
+									"path": [
+										"api",
+										"orders"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "GET /api/orders/bids",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{protocol}}://{{domain}}:{{ordersPort}}/api/orders/bids",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{domain}}"
+									],
+									"port": "{{ordersPort}}",
+									"path": [
+										"api",
+										"orders",
+										"bids"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "GET /api/orders/asks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{protocol}}://{{domain}}:{{ordersPort}}/api/orders/asks",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{domain}}"
+									],
+									"port": "{{ordersPort}}",
+									"path": [
+										"api",
+										"orders",
+										"asks"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE /api/orders",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "{{protocol}}://{{domain}}:{{ordersPort}}/api/orders",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{domain}}"
+									],
+									"port": "{{ordersPort}}",
+									"path": [
+										"api",
+										"orders"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "POST /api/orders/ask",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user1\"\r\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{domain}}:{{ordersPort}}/api/orders/ask",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{domain}}"
+									],
+									"port": "{{ordersPort}}",
+									"path": [
+										"api",
+										"orders",
+										"ask"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "POST /api/orders/bid",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user2\"\r\n}"
+								},
+								"url": {
+									"raw": "{{protocol}}://{{domain}}:{{ordersPort}}/api/orders/bid",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{domain}}"
+									],
+									"port": "{{ordersPort}}",
+									"path": [
+										"api",
+										"orders",
+										"bid"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Reverse Proxy",
+			"description": "",
+			"item": [
+				{
+					"name": "Logger",
+					"description": "",
+					"item": [
+						{
+							"name": "Non Partitioned",
+							"description": "",
+							"item": [
+								{
+									"name": "POST /api/logger",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\": \"trade1\",\n\t\"ask\": {\n\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\"amount\": 1,\n\t\t\t\"price\": 1.0,\n\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"settlement\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t}\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Logger/api/logger",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"Logger",
+												"api",
+												"logger"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET /api/logger/active",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\": \"trade1\",\n\t\"ask\": {\n\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\"amount\": 1,\n\t\t\t\"price\": 1.0,\n\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"settlement\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t}\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Logger/api/logger/active",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"Logger",
+												"api",
+												"logger",
+												"active"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET /api/logger/done",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\": \"trade1\",\n\t\"ask\": {\n\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\"amount\": 1,\n\t\t\t\"price\": 1.0,\n\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"settlement\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t}\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Logger/api/logger/done",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"Logger",
+												"api",
+												"logger",
+												"done"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Partitioned",
+							"description": "",
+							"item": [
+								{
+									"name": "POST /api/logger",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\": \"trade1\",\n\t\"ask\": {\n\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\"amount\": 1,\n\t\t\t\"price\": 1.0,\n\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"settlement\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t}\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Logger/api/logger?PartitionKey=1&PartitionKind=Int64Range",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"Logger",
+												"api",
+												"logger"
+											],
+											"query": [
+												{
+													"key": "PartitionKey",
+													"value": "1",
+													"equals": true
+												},
+												{
+													"key": "PartitionKind",
+													"value": "Int64Range",
+													"equals": true
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET /api/logger/active",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\": \"trade1\",\n\t\"ask\": {\n\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\"amount\": 1,\n\t\t\t\"price\": 1.0,\n\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"settlement\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t}\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Logger/api/logger/active?PartitionKey=1&PartitionKind=Int64Range",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"Logger",
+												"api",
+												"logger",
+												"active"
+											],
+											"query": [
+												{
+													"key": "PartitionKey",
+													"value": "1",
+													"equals": true
+												},
+												{
+													"key": "PartitionKind",
+													"value": "Int64Range",
+													"equals": true
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET /api/logger/done",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\": \"trade1\",\n\t\"ask\": {\n\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\"amount\": 1,\n\t\t\t\"price\": 1.0,\n\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t},\n\t\"settlement\": {\n\t\t\t\t\"pair\": \"GBPUSD\",\n\t\t\t\t\"amount\": 1,\n\t\t\t\t\"price\": 1.0,\n\t\t\t\t\"userId\": \"user1\"\n\t\t\t}\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Logger/api/logger/done?PartitionKey=1&PartitionKind=Int64Range",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"Logger",
+												"api",
+												"logger",
+												"done"
+											],
+											"query": [
+												{
+													"key": "PartitionKey",
+													"value": "1",
+													"equals": true
+												},
+												{
+													"key": "PartitionKind",
+													"value": "Int64Range",
+													"equals": true
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Fulfillment",
+					"description": "",
+					"item": [
+						{
+							"name": "Trades",
+							"description": "",
+							"item": [
+								{
+									"name": "Partitioned",
+									"description": "",
+									"item": [
+										{
+											"name": "POST /api/trades",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"ask\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t}\n}"
+												},
+												"url": {
+													"raw": "http://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/trades?PartitionKey=1&PartitionKind=Int64Range",
+													"protocol": "http",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"trades"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "1",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Int64Range",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/trades",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"ask\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t}\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/trades?PartitionKey=1&PartitionKind=Int64Range",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"trades"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "1",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Int64Range",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Non Partitioned",
+									"description": "",
+									"item": [
+										{
+											"name": "POST /api/trades",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"ask\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t}\n}"
+												},
+												"url": {
+													"raw": "http://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/trades",
+													"protocol": "http",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"trades"
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/trades",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"ask\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t},\n\t\"bid\": {\n\t\t\t\"value\": 10,\n\t\t\t\"quantity\": 100,\n\t\t\t\"userId\": \"asddda\",\n\t\t\t\"id\": \"1231\",\n\t\t\t\"timestamp\": \"2008-03-09T16:05:07\"\n\t\t\t}\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/trades",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"trades"
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Users",
+							"description": "",
+							"item": [
+								{
+									"name": "Partitioned",
+									"description": "",
+									"item": [
+										{
+											"name": "POST /api/users",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/users?PartitionKey=1&PartitionKind=Int64Range",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"users"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "1",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Int64Range",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "PUT /api/users",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/users?PartitionKey=1&PartitionKind=Int64Range",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"users"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "1",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Int64Range",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "DELETE /api/users/{id}",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/users/{id}?PartitionKey=1&PartitionKind=Int64Range",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"users",
+														"{id}"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "1",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Int64Range",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/users",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/users?PartitionKey=1&PartitionKind=Int64Range",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"users"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "1",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Int64Range",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/users/{id}",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/users/user1?PartitionKey=1&PartitionKind=Int64Range",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"users",
+														"user1"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "1",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Int64Range",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Non Partitioned",
+									"description": "",
+									"item": [
+										{
+											"name": "POST /api/users",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/users",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"users"
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "PUT /api/users",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/users",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"users"
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "DELETE /api/users/{id}",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": ""
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/users/user1",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"users",
+														"user1"
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/users",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/users",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"users"
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/users/{id}",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"id\": \"user1\",\r\n\t\"username\": \"user1\",\r\n\t\"currencyAmounts\": {\r\n\t\t\"GBP\": 1000000000000,\r\n\t\t\"USD\": 1000000000000,\r\n\t\t\"EUR\": 1000000000000\r\n\t}\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/api/users/user1",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"Fulfillment",
+														"api",
+														"users",
+														"user1"
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "OrderBook",
+					"description": "",
+					"item": [
+						{
+							"name": "Non Partitioned",
+							"description": "",
+							"item": [
+								{
+									"name": "GET /api/orders",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"OrderBook",
+												"api",
+												"orders"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET /api/orders/bids",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bids",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"OrderBook",
+												"api",
+												"orders",
+												"bids"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "GET /api/orders/asks",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/asks",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"OrderBook",
+												"api",
+												"orders",
+												"asks"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "DELETE /api/orders",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"OrderBook",
+												"api",
+												"orders"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "POST /api/orders/ask",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user1\"\r\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/ask",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"OrderBook",
+												"api",
+												"orders",
+												"ask"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "POST /api/orders/bid",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user2\"\r\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bid",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{domain}}"
+											],
+											"port": "{{reverseProxyPort}}",
+											"path": [
+												"Exchange",
+												"OrderBook",
+												"api",
+												"orders",
+												"bid"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Partitioned",
+							"description": "",
+							"item": [
+								{
+									"name": "GBPUSD",
+									"description": "",
+									"item": [
+										{
+											"name": "GET /api/orders",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=GBPUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/bids",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bids?PartitionKey=GBPUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bids"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/asks",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/asks?PartitionKey=GBPUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"asks"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "DELETE /api/orders",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=GBPUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/ask",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user1\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/ask?PartitionKey=GBPUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"ask"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/bid",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user2\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bid?PartitionKey=GBPUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bid"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "GBPEUR",
+									"description": "",
+									"item": [
+										{
+											"name": "GET /api/orders",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=GBPEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/bids",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bids?PartitionKey=GBPEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bids"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/asks",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/asks?PartitionKey=GBPEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"asks"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "DELETE /api/orders",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=GBPEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/ask",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user1\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/ask?PartitionKey=GBPEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"ask"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/bid",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user2\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bid?PartitionKey=GBPEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bid"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "GBPEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "USDGBP",
+									"description": "",
+									"item": [
+										{
+											"name": "GET /api/orders",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=USDGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/bids",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bids?PartitionKey=USDGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bids"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/asks",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/asks?PartitionKey=USDGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"asks"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "DELETE /api/orders",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=USDGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/ask",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user1\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/ask?PartitionKey=USDGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"ask"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/bid",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user2\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bid?PartitionKey=USDGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bid"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "USDEUR",
+									"description": "",
+									"item": [
+										{
+											"name": "GET /api/orders",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=USDEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/bids",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bids?PartitionKey=USDEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bids"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/asks",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/asks?PartitionKey=USDEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"asks"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "DELETE /api/orders",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=USDEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/ask",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user1\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/ask?PartitionKey=USDEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"ask"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/bid",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user2\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bid?PartitionKey=USDEUR&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bid"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "USDEUR",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "EURGBP",
+									"description": "",
+									"item": [
+										{
+											"name": "GET /api/orders",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=EURGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/bids",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bids?PartitionKey=EURGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bids"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/asks",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/asks?PartitionKey=EURGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"asks"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "DELETE /api/orders",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=EURGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/ask",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user1\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/ask?PartitionKey=EURGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"ask"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/bid",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user2\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bid?PartitionKey=EURGBP&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bid"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURGBP",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "EURUSD",
+									"description": "",
+									"item": [
+										{
+											"name": "GET /api/orders",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=EURUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/bids",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bids?PartitionKey=EURUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bids"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "GET /api/orders/asks",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/asks?PartitionKey=EURUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"asks"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "DELETE /api/orders",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders?PartitionKey=EURUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/ask",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user1\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/ask?PartitionKey=EURUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"ask"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										},
+										{
+											"name": "POST /api/orders/bid",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n\t\"pair\": \"GBPUSD\",\r\n\t\"amount\": 1,\r\n\t\"price\": 1.0,\r\n\t\"userId\": \"user2\"\r\n}"
+												},
+												"url": {
+													"raw": "{{protocol}}://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/api/orders/bid?PartitionKey=EURUSD&PartitionKind=Named",
+													"protocol": "{{protocol}}",
+													"host": [
+														"{{domain}}"
+													],
+													"port": "{{reverseProxyPort}}",
+													"path": [
+														"Exchange",
+														"OrderBook",
+														"api",
+														"orders",
+														"bid"
+													],
+													"query": [
+														{
+															"key": "PartitionKey",
+															"value": "EURUSD",
+															"equals": true
+														},
+														{
+															"key": "PartitionKind",
+															"value": "Named",
+															"equals": true
+														}
+													]
+												},
+												"description": ""
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Swagger",
+			"description": "",
+			"item": [
+				{
+					"name": "Fulfillment UI",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"\",\n\t\"currencyAmounts\": {\n\t\t\"GBP\": 100000000,\n\t\t\"USD\": 100000000,\n\t\t\"EUR\": 100000000\n\t},\n\t\"username\": \"buyer\"\n}"
+						},
+						"url": {
+							"raw": "http://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/swagger/v1/swagger.json?PartitionKey=1&PartitionKind=Int64Range",
+							"protocol": "http",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{reverseProxyPort}}",
+							"path": [
+								"Exchange",
+								"Fulfillment",
+								"swagger",
+								"v1",
+								"swagger.json"
+							],
+							"query": [
+								{
+									"key": "PartitionKey",
+									"value": "1",
+									"equals": true
+								},
+								{
+									"key": "PartitionKind",
+									"value": "Int64Range",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Fulfillment",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"\",\n\t\"currencyAmounts\": {\n\t\t\"GBP\": 100000000,\n\t\t\"USD\": 100000000,\n\t\t\"EUR\": 100000000\n\t},\n\t\"username\": \"buyer\"\n}"
+						},
+						"url": {
+							"raw": "http://{{domain}}:{{reverseProxyPort}}/Exchange/Fulfillment/swagger/v1/swagger.json?PartitionKey=1&PartitionKind=Int64Range",
+							"protocol": "http",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{reverseProxyPort}}",
+							"path": [
+								"Exchange",
+								"Fulfillment",
+								"swagger",
+								"v1",
+								"swagger.json"
+							],
+							"query": [
+								{
+									"key": "PartitionKey",
+									"value": "1",
+									"equals": true
+								},
+								{
+									"key": "PartitionKind",
+									"value": "Int64Range",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "OrderBook UI",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"\",\n\t\"currencyAmounts\": {\n\t\t\"GBP\": 100000000,\n\t\t\"USD\": 100000000,\n\t\t\"EUR\": 100000000\n\t},\n\t\"username\": \"buyer\"\n}"
+						},
+						"url": {
+							"raw": "http://{{domain}}:{{reverseProxyPort}}/Exchange/Gateway/orderbook",
+							"protocol": "http",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{reverseProxyPort}}",
+							"path": [
+								"Exchange",
+								"Gateway",
+								"orderbook"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "OrderBook Partitioned",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"\",\n\t\"currencyAmounts\": {\n\t\t\"GBP\": 100000000,\n\t\t\"USD\": 100000000,\n\t\t\"EUR\": 100000000\n\t},\n\t\"username\": \"buyer\"\n}"
+						},
+						"url": {
+							"raw": "http://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/swagger/v1/swagger.json?PartitionKey=GBPUSD&PartitionKind=Named",
+							"protocol": "http",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{reverseProxyPort}}",
+							"path": [
+								"Exchange",
+								"OrderBook",
+								"swagger",
+								"v1",
+								"swagger.json"
+							],
+							"query": [
+								{
+									"key": "PartitionKey",
+									"value": "GBPUSD",
+									"equals": true
+								},
+								{
+									"key": "PartitionKind",
+									"value": "Named",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "OrderBook",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"\",\n\t\"currencyAmounts\": {\n\t\t\"GBP\": 100000000,\n\t\t\"USD\": 100000000,\n\t\t\"EUR\": 100000000\n\t},\n\t\"username\": \"buyer\"\n}"
+						},
+						"url": {
+							"raw": "http://{{domain}}:{{reverseProxyPort}}/Exchange/OrderBook/swagger/v1/swagger.json",
+							"protocol": "http",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{reverseProxyPort}}",
+							"path": [
+								"Exchange",
+								"OrderBook",
+								"swagger",
+								"v1",
+								"swagger.json"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Logger UI",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"\",\n\t\"currencyAmounts\": {\n\t\t\"GBP\": 100000000,\n\t\t\"USD\": 100000000,\n\t\t\"EUR\": 100000000\n\t},\n\t\"username\": \"buyer\"\n}"
+						},
+						"url": {
+							"raw": "http://{{domain}}:{{reverseProxyPort}}/Exchange/Gateway/logger",
+							"protocol": "http",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{reverseProxyPort}}",
+							"path": [
+								"Exchange",
+								"Gateway",
+								"logger"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Logger Partitioned",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\": \"\",\n\t\"currencyAmounts\": {\n\t\t\"GBP\": 100000000,\n\t\t\"USD\": 100000000,\n\t\t\"EUR\": 100000000\n\t},\n\t\"username\": \"buyer\"\n}"
+						},
+						"url": {
+							"raw": "http://{{domain}}:{{reverseProxyPort}}/Exchange/Logger/swagger/v1/swagger.json?PartitionKey=1&PartitionKind=Int64Range",
+							"protocol": "http",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "{{reverseProxyPort}}",
+							"path": [
+								"Exchange",
+								"Logger",
+								"swagger",
+								"v1",
+								"swagger.json"
+							],
+							"query": [
+								{
+									"key": "PartitionKey",
+									"value": "1",
+									"equals": true
+								},
+								{
+									"key": "PartitionKind",
+									"value": "Int64Range",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Management (Certificate Required)",
+			"description": "",
+			"item": [
+				{
+					"name": "GET Cluster Events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Value\": 10,\n\t\"Quantity\": 100\n}"
+						},
+						"url": {
+							"raw": "https://{{domain}}:19080/EventsStore/Cluster/Events?api-version=6.2-preview&StartTimeUtc=2018-04-03T18:00:00Z&EndTimeUtc=2018-04-04T18:00:00Z",
+							"protocol": "https",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "19080",
+							"path": [
+								"EventsStore",
+								"Cluster",
+								"Events"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "6.2-preview",
+									"equals": true
+								},
+								{
+									"key": "StartTimeUtc",
+									"value": "2018-04-03T18:00:00Z",
+									"equals": true
+								},
+								{
+									"key": "EndTimeUtc",
+									"value": "2018-04-04T18:00:00Z",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Nodes Events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Value\": 10,\n\t\"Quantity\": 100\n}"
+						},
+						"url": {
+							"raw": "https://{{domain}}:19080/EventsStore/Nodes/Events?api-version=6.2-preview&StartTimeUtc=2018-04-03T18:00:00Z&EndTimeUtc=2018-04-04T18:00:00Z",
+							"protocol": "https",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "19080",
+							"path": [
+								"EventsStore",
+								"Nodes",
+								"Events"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "6.2-preview",
+									"equals": true
+								},
+								{
+									"key": "StartTimeUtc",
+									"value": "2018-04-03T18:00:00Z",
+									"equals": true
+								},
+								{
+									"key": "EndTimeUtc",
+									"value": "2018-04-04T18:00:00Z",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Applications Events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Value\": 10,\n\t\"Quantity\": 100\n}"
+						},
+						"url": {
+							"raw": "https://{{domain}}:19080/EventsStore/Applications/Events?api-version=6.2-preview&StartTimeUtc=2018-04-03T18:00:00Z&EndTimeUtc=2018-04-04T18:00:00Z",
+							"protocol": "https",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "19080",
+							"path": [
+								"EventsStore",
+								"Applications",
+								"Events"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "6.2-preview",
+									"equals": true
+								},
+								{
+									"key": "StartTimeUtc",
+									"value": "2018-04-03T18:00:00Z",
+									"equals": true
+								},
+								{
+									"key": "EndTimeUtc",
+									"value": "2018-04-04T18:00:00Z",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Services Events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Value\": 10,\n\t\"Quantity\": 100\n}"
+						},
+						"url": {
+							"raw": "https://{{domain}}:19080/EventsStore/Services/Events?api-version=6.2-preview&StartTimeUtc=2018-04-03T18:00:00Z&EndTimeUtc=2018-04-04T18:00:00Z",
+							"protocol": "https",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "19080",
+							"path": [
+								"EventsStore",
+								"Services",
+								"Events"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "6.2-preview",
+									"equals": true
+								},
+								{
+									"key": "StartTimeUtc",
+									"value": "2018-04-03T18:00:00Z",
+									"equals": true
+								},
+								{
+									"key": "EndTimeUtc",
+									"value": "2018-04-04T18:00:00Z",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Partitions Events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Value\": 10,\n\t\"Quantity\": 100\n}"
+						},
+						"url": {
+							"raw": "https://{{domain}}:19080/EventsStore/Services/Events?api-version=6.2-preview&StartTimeUtc=2018-04-03T18:00:00Z&EndTimeUtc=2018-04-04T18:00:00Z",
+							"protocol": "https",
+							"host": [
+								"{{domain}}"
+							],
+							"port": "19080",
+							"path": [
+								"EventsStore",
+								"Services",
+								"Events"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "6.2-preview",
+									"equals": true
+								},
+								{
+									"key": "StartTimeUtc",
+									"value": "2018-04-03T18:00:00Z",
+									"equals": true
+								},
+								{
+									"key": "EndTimeUtc",
+									"value": "2018-04-04T18:00:00Z",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
